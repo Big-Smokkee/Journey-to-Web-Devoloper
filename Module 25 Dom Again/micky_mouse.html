@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micky Mouse</title>
+</head>
+
+<body>
+    <button id="btn-mouse">Micky Mouse</button>
+    <br><br>
+    <input id="user-name" placeholder="Your name" type="text">
+    <input id="user-email" placeholder="Your emali" type="text">
+    <script>
+        // document.getElementById("user-name").addEventListener("focus", function () {
+        //     console.log("User about to write name");
+        // });
+        // document.getElementById("user-name").addEventListener("blur", function () {
+        //     console.log("User done with name");
+        // });
+        // document.getElementById("user-email").addEventListener("focus", function () {
+        //     console.log("User about to write email");
+        // });
+        // document.getElementById("user-email").addEventListener("focus", function () {
+        //     console.log("User done with email");
+        // });
+        document.getElementById("user-name").addEventListener("keyup", function (event) {
+            // console.log("typing: ", event.key);OR
+            console.log("typing: ", event.target.value);
+        });
+    </script>
+    <script src="./js/micky_mouse.js"></script>
+</body>
+
+</html>

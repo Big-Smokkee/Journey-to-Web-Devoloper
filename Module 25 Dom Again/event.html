@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <h1 id="page-title">Event Handler</h1>
+    <button id="btn-update-title">Update title</button>
+
+    <p id="user-info">No user</p>
+    <button id="btn-login">Login</button>
+    <br><br>
+
+    <!-- handle input text -->
+    <h3>Option 1</h3>
+    <p id="name-paragraph">No name</p>
+    <input type="text" placeholder="Your name" id="name-input">
+    <button id="btn-update">Update</button>
+    <br><br>
+
+    <!-- dynamin input text -->
+    <h3>Option 2</h3>
+    <p id="name-paragraph-2">No name</p>
+    <input type="text" placeholder="Your name" id="name-input-2">
+    <button id="btn-update-2">Update</button>
+
+    <script>
+        // document.getElementById("btn-update-2").addEventListener('mouse over', function () {
+        //     const nameID2 = document.getElementById("name-paragraph-2");
+        //     const nameInput2 = document.getElementById("name-input-2");
+
+        //     nameInput2.addEventListener('keypress', function () {
+        //         nameID2.innerText = nameInput2.value;
+        //     });
+        // });
+
+        document.getElementById("name-input-2").addEventListener('keyup', function () {
+            const nameID2 = document.getElementById("name-paragraph-2");
+            const nameInput2 = document.getElementById("name-input-2");
+
+            nameID2.innerText = nameInput2.value;
+
+        });
+
+    </script>
+    <script src="./js/handler.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+
+<body>
+    <h1>Dom Doma dom Events</h1>
+    <button onclick="makeYellow()">Click me</button>
+    <button onclick="makePurpleH1()">h1 color changer</button>
+    <h2>Give me a color</h2>
+    <input id="colorInput" type="text">
+    <button onclick="changeColor()">Change Color</button>
+    <br>
+    <button id="btn-makeBlue">Make Blue</button>
+
+    <br>
+    <!-- option 4: addEventListner -->
+    <h3>option 4: addEventListner</h3>
+    <button id="btn-make-green">Make Green</button>
+    <script>
+        //getElementById.addEventListner
+        document.getElementById("btn-make-green").addEventListener("click", function makeGreen() {
+            const btns = document.getElementsByTagName("button");
+            for (let btn of btns) {
+                btn.style.padding = "8px 16px";
+                btn.style.backgroundColor = "red";
+            }
+        });
+    </script>
+
+    <script>
+        function makeYellow() {
+            document.body.style.backgroundColor = "Yellow";
+        }
+        function makePurpleH1() {
+            const h1 = document.getElementsByTagName('h1');
+            for (let item of h1) {
+                item.style.color = "Pink";
+            }
+            // const h1 = document.body.h1;
+            // for (let item of h1) {
+            //     item.style.color = "Pink";
+            // }
+        }
+        function changeColor() {
+            const colorText = document.getElementById('colorInput').value;
+            document.body.style.backgroundColor = colorText;
+        }
+
+    </script>
+    <script src="./js/events.js"></script>
+</body>
+
+</html>
