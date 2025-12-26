@@ -5,17 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #post-container {
+            max-width: 1160px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            row-gap: 30px;
+        }
+
+        .post-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 1px 1px 1px gray;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .post-card p {
+            text-align: justify;
+        }
+    </style>
 </head>
 
 <body>
     <button onclick="loadData()">Load Data</button>
     <button onclick="loadPosts()">Load Posts</button>
+    <h1>All posts</h1>
+    <div id="post-container">
 
-    <ol id="post-container">
-
-    </ol>
-
-
+    </div>
     <!-- <script src="./jasonPlaceholder.js"></script> -->
     <!-- <script src="./loadPost.js"></script> -->
     <script src="./posts.js"></script>

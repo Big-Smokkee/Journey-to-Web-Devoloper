@@ -5,15 +5,22 @@ const loadPosts = () => {
         .then(json => displayPost(json));
 }
 const displayPost = (posts) => {
-    // 1. get the container
+    // 1. get the container and empty the container
     const postContainer = document.getElementById("post-container");
     postContainer.innerHTML = "";
     for (const post of posts) {
-        console.log(post.title);
         // 2. Create HTML Element
-        const li = document.createElement('li');
-        li.innerText = post.title;
-        //3. Add li into container
-        postContainer.appendChild(li);
+        const postCard = document.createElement('div');
+        postCard.innerHTML = `<div class="post-card">
+            <h2>${post.id} ${post.title}</h2>
+
+            <body>
+                ${post.body}
+            </body>
+        </div>
+        `
+        // 3. add to the container
+        postContainer.appendChild(postCard);
     }
 }
+loadPosts();
