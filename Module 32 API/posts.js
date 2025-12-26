@@ -6,7 +6,8 @@ const loadPosts = () => {
 }
 const displayPost = (posts) => {
     // 1. get the container
-    const postContainer = document.getElementById("post-container")
+    const postContainer = document.getElementById("post-container");
+    postContainer.innerHTML = "";
     for (const post of posts) {
         console.log(post.title);
         // 2. Create HTML Element
